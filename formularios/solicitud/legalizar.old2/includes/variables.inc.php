@@ -1,0 +1,55 @@
+<?php
+$cadenas = new Cadenas();
+$fechas = new Fechas();
+$componentes=new Componentes();
+$estratos = new Estratos();
+$tuberias = new Tuberias();
+$sectores = new Sectores();
+$ciudades = new Ciudades();
+$regiones = new Regiones();
+$paises = new Paises();
+$suscriptores = new Suscriptores();
+$validaciones=new Validaciones();
+/** Valores **/
+$v['solicitud'] =$validaciones->recibir("solicitud");
+$v['suscriptor']=$suscriptores->disponible('normal');
+$v['documento']=$validaciones->recibir("_documento");
+$v['identificacion']=$validaciones->recibir("_identificacion");
+$v['nombres']=$validaciones->recibir("_nombres");
+$v['apellidos']=$validaciones->recibir("_apellidos");
+$v['nombre']=$cadenas->capitalizar($v['nombres']." ".$v['apellidos']);
+$v['direccion']=$validaciones->recibir("_direccion");
+$v['referencia']=$validaciones->recibir("_referencia");
+$v['estrato']=$validaciones->recibir("_estrato");
+$v['predial']=$validaciones->recibir("_predial");
+$v['latitud']=$validaciones->recibir("_latitud");
+$v['longitud']=$validaciones->recibir("_longitud");
+$v['correo']=$validaciones->recibir("_correo");
+$v['telefonos']=$validaciones->recibir("_telefonos");
+$v['creado']=$fechas->hoy();
+$v['actualizado']=$validaciones->recibir("_actualizado");
+$v['creador']=$validaciones->recibir("_creador");
+$v['actualizador']=$validaciones->recibir("_actualizador");
+$v['diametro']=$validaciones->recibir("_diametro");
+$v['acueducto']=$validaciones->recibir("_acueducto");
+$v['alcantarillado']=$validaciones->recibir("_alcantarillado");
+$v['credito']=$validaciones->recibir("_credito");
+$v['certificado']=$validaciones->recibir("_certificado");
+$v['factura']=$validaciones->recibir("_factura");
+$v['conexion']=$validaciones->recibir("_conexion");
+$v['sexo']=$validaciones->recibir("_sexo");
+$v['nacimiento']=$validaciones->recibir("_nacimiento");
+$v['manzana']=$validaciones->recibir("_manzana");
+$v['seccion']=$validaciones->recibir("_seccion");
+$v['sector']=$validaciones->recibir("_sector");
+$v['ciudad']=$validaciones->recibir("_ciudad");
+$v['region']=$validaciones->recibir("_region");
+$v['pais']=$validaciones->recibir("_pais");
+$v['ciclo']=$validaciones->recibir("_ciclo");
+$v['ruta']=$validaciones->recibir("_ruta");
+$v['uso']=$validaciones->recibir("_uso");
+$v['habitaciones']=$validaciones->recibir("_habitaciones");
+$v['habitantes']=$validaciones->recibir("_habitantes");
+$v['ubicacion']=$validaciones->recibir("_ubicacion");
+
+?>
